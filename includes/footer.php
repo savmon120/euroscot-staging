@@ -34,5 +34,7 @@
     </div>
   </div>
 </footer>
+<!-- Load navigation script -->
+<script src="/assets/js/nav.js"></script>
 </body>
 </html>
