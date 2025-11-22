@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /docs/
+Disallow: /assets/
+Disallow: /dwlds/
+Disallow: /gallery/
+Disallow: /template/
+Disallow: /api/
+Disallow: /assets/
+Disallow: /includes/
+
+Sitemap: https://www.euroscot-virtual.co.uk/sitemap.php

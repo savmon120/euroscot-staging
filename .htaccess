@@ -1,0 +1,40 @@
+RewriteEngine On
+RewriteBase /
+
+# Clean URL routing: /home → index.php?page=home
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1 [QSA,L]
+
+# Custom routes for gallery pages
+RewriteRule ^gallery_upload$ pages/gallery_upload.php [L]
+RewriteRule ^gallery$ pages/gallery.php [L]
+
+# Optional: Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Disable directory listing globally
+Options -Indexes
+
+# Block direct access to sensitive subdirectories
+RedirectMatch 403 ^/(api|includes|pages|template)(/.*)?$
+
+# Protect .env file from public access
+<FilesMatch "^\.env$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Protect vamsys_token.json from public access
+<Files "vamsys_token.json">
+  Order allow,deny
+  Deny from all
+</Files>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php83” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php83___lsphp .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
