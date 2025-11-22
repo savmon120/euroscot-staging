@@ -1,0 +1,1834 @@
+/* ================================
+   EuroScot | Air Scotland Styles
+   Hex base: #002859
+   ================================ */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/assets/images/bgimage2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #002859;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+/* ================================
+   Header & Navigation
+   ================================ */
+header {
+  background: url('/assets/images/tartan-bg.png') repeat;
+  background-size: auto;
+  background-position: top left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  min-height: 60px;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.logo img {
+  height: 50px;
+  max-width: 100%;
+  display: block;
+}
+.navbar {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.nav-links li a {
+  background-color: #fff;
+  color: #002859;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.nav-links li a:hover {
+  background-color: #002859;
+  color: white;
+}
+
+/* ================================
+   Branding & NOTAM Banner
+   ================================ */
+
+.site-logo {
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.notam-banner {
+  margin: 0;
+  background-color: #ffcc00;
+  color: #002147;
+  padding: 0.1rem 0.5rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 0; /* flat strip */
+}
+
+.branding {
+  text-align: center;
+  background-color: #e6f0ff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   Page Titles
+   ================================ */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* ================================
+   Table Styling
+   ================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+th {
+  background-color: #002859;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+td {
+  background-color: #f2f2f2;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+tr:nth-child(even) td {
+  background-color: #e9e9e9;
+}
+
+/* ================================
+   Footer
+   ================================ */
+footer, .site-footer {
+  background-color: transparent;
+  color: white;
+  padding: 20px 20px 10px; /* reduced bottom padding */
+  margin-top: 40px;
+  margin-bottom: 0;        /* ensure no extra space below */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer-images {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-img-box {
+  background-color: #26255F;
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-img-box img {
+  width: 85px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  background-color: transparent;
+  padding: 2px;
+}
+
+.footer-img-box img[alt="IVAO"],
+.footer-img-box img[alt="VATSIM"] {
+  transform: scale(1.1);
+}
+
+.footer-center-box {
+  background-color: #26255F;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  flex: 1 1 auto;
+}
+
+.footer-center-box a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+/* ================================
+   Page Layout
+   ================================ */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.content-area {
+  background-color: transparent;
+}
+
+/* ================================
+   Sidebar Grid (About Page - Separated Layout)/ WITH HORIZONTAL
+/* ================================ */
+/* === Sidebar Layout === */
+.sidebar-grid-separated {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.sidebar-image img {
+  width: 240px;
+  border-radius: 6px;
+}
+
+/* === Sidebar Links === */
+.sidebar-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 10px 15px;
+  background-color: #26255F;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  min-width: 160px;
+  text-align: right;
+  font-size: 1rem;
+  border: 2px solid transparent;
+}
+
+.sidebar-links a:hover {
+  background-color: #002859;
+  color: #FFFFFF;
+  border: 2px solid #002859;
+}
+
+.sidebar-links a.active {
+  background-color: #002859;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+/* ================================ */
+/* === Horizontal Menu (Submenu) === */
+.horizontal-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.horizontal-menu nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.horizontal-menu a {
+  background-color: #26255F;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  min-width: 160px;
+  text-align: center;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.horizontal-menu a:hover {
+  background-color: #002859;
+  color: #FFFFFF;
+  border: 2px solid #002859;
+}
+
+.horizontal-menu a.active {
+  background-color: #002859;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+/* === Optional Wrapper for Scoped Submenu === */
+.submenu-about-wrapper {
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* ================================ */
+/* === Menu Image Banner === */
+.menu-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 200px; /* Adjust to desired thinness */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+/* ================================
+   Hero Banner
+   ================================ */
+.hero-banner {
+  background: linear-gradient(to bottom, rgba(0,40,89,0.85), rgba(0,40,89,0.6)),
+              url('/assets/images/homebanner.jpg') repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+
+  min-width: 1140px;
+  min-height: 264px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.btn-primary,
+.btn-secondary {
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary {
+  background-color: #002859;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #26255F;
+}
+.btn-secondary {
+  background-color: rgba(255,255,255,0.85);
+  color: #002859;
+}
+.btn-secondary:hover {
+  background-color: #e9e9e9;
+}
+
+/* ================================
+   Section Wrapper
+   ================================ */
+.section-wrapper {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 40, 89, 0.06);
+}
+
+/* ================================
+   Dropdown Sections
+   ================================ */
+/* ─── Dropdown Toggle Styling ───────────────────── */
+.dropdown-box {
+  background-color: #26255F;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-box:hover {
+  background-color: #004080;
+}
+
+.dropdown-box::after {
+  content: "▼";
+  position: absolute;
+  right: 20px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when active */
+.dropdown-box.active::after {
+  transform: rotate(180deg);
+}
+
+/* ─── Dropdown Content Styling ───────────────────── */
+.dropdown-content {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-left: 4px solid #002859;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: #002859;
+}
+
+.dropdown-content.open {
+  display: block;
+}
+
+/* ================================
+   Reusable Headings & Lists
+   ================================ */
+.content-area h3 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #002859;
+}
+.content-area ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.content-area ul li {
+  margin-bottom: 8px;
+}
+
+/* ================================
+   Live Status Strip
+   ================================ */
+.status-strip {
+  background-color: #002859;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+.status-strip ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.status-strip li {
+  font-weight: bold;
+  margin: 10px;
+}
+.euvs-flight-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: center !important;
+}
+
+.euvs-flight-card {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.euvs-flight-card:visited {
+  color: #FFFFFF;
+}
+
+.euvs-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* 1–2px spacing between beacon and text */
+}
+
+.euvs-activity-beacon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #00ff00;
+  box-shadow: 0 0 8px #00ff00;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.euvs-flight-text {
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+/* ================================
+   Auth Forms (Login/Register)
+   ================================ */
+.auth-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 40, 89, 0.1);
+}
+.auth-container h1 {
+  color: #002
+}
+div#cookie-banner {
+    background:rgba(0,44,95,0.80); 
+    border-radius:16px; 
+    padding:24px; 
+    text-align:center; 
+    box-shadow:0 4px 18px rgba(0,44,95,0.1); 
+    transition:transform 0.2s ease; 
+    color:#fff; 
+    margin:20px;
+}
+.fleet-section {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 12px rgba(0, 40, 89, 0.06);
+}
+
+.fleet-section h2 {
+  font-size: 2rem;
+  color: #002859;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.fleet-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #002859;
+  text-align: center;
+}
+
+.fleet-section a {
+  color: #002859;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.fleet-card {
+background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 40, 89, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.fleet-card:hover {
+  transform: translateY(-4px);
+}
+
+.fleet-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.fleet-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.fleet-card p {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.fleet-badge {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #26255F;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.on-order {
+  font-style: italic;
+  color: #ffffff;
+}
+    .EUSVlivemappage {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #map {
+      flex: 1;
+      min-height: 60vh;
+    }
+    #table {
+      display: flex;
+      min-height: 40vh;
+    }
+    
+    #flightsTable {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    #flightsTable th, #flightsTable td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #flightsTable th {
+      background-color: #26255F;
+      color: #ffffff;
+    }
+
+    #flightsTable tr:hover {
+      background-color: #f0f8ff;
+    }
+
+    .highlight-row {
+      background-color: #dbe9ff !important;
+      font-weight: bold;
+    }
+
+    .plane-icon {
+      width: 36px;
+      height: 36px;
+      transform-origin: center center;
+    }
+
+    .mapboxgl-popup-content {
+      background: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
+
+    .mapboxgl-popup-tip {
+      display: none !important;
+    }
+
+    .euroscot-popup {
+      background-color: rgba(0, 40, 89, 0.8);
+      color: #FFFFFF;
+      font-size: 13px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      position: relative;
+      min-width: 180px;
+    }
+
+    .euroscot-popup strong {
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .popup-close:hover {
+      color: #ffdddd;
+    }
+/*    .eus-map-wrapper {
+  min-width: 1140px;
+  display: flex;
+  flex-direction: column;
+} */
+.eus-stats-ticker {
+  overflow: hidden;
+  background-color: #26255F; /* Deep blue background */
+  color: #ffffff;            /* White text */
+  font-weight: bold;
+  font-size: 0.95rem;
+/*  border-radius: 4px;*/
+  padding: 0.6rem 1rem;
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 48px; /* or whatever height fits your design */
+  /*overflow-y: hidden;*/
+/*  align-content: center;
+  text-align: center;*/
+  width:100%;
+  box-sizing: border-box;
+}
+
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: tickerScroll 50s linear infinite;
+  will-change: transform;
+/*  min-width: 100vh;*/
+}
+
+.ticker-item {
+  margin-right: 48px;
+  display: inline-block;
+}
+
+.ticker-spacer {
+  display: inline-block;
+  width: 60px; /* Spacer between stats and flights */
+}
+
+.ticker-title {
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 24px;
+  display: inline-block;
+}
+
+.flight-link {
+  color: #ffffff; /* White callsign text */
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 48px;
+  display: inline-block;
+}
+
+.beacon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #00ff00; /* Green beacon */
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ================================
+   NEW HOME PAGE
+   ================================ */
+
+/* === Wrapper for Full-Width Layout === */
+.eus-home-wrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Top Row Layout === */
+.eus-home-top-row {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) 1fr minmax(0, 260px);
+  align-items: start;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+/* === Left Column === */
+.eus-home-left-column {
+  background-color: rgba(38,37,95,0.6);
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 0;
+  margin-top: 40px; /* ✅ Drop to match hero banner */
+}
+
+/* === Center Column === */
+.eus-home-center-column {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; /* ✅ Drop center to match left and right */
+}
+
+
+.eus-home-hero-banner {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px; /* ✅ This pushes it down */
+  background: linear-gradient(to bottom, rgba(38,37,95,0.85), rgba(38,37,95,0.6));
+  border-radius: 8px;
+  color: white;
+}
+
+.eus-home-hero-banner h1 {
+  margin-top: 0;
+}
+
+/* === Right Column === */
+.eus-home-right-column {
+  background-color: rgba(38,37,95,0.6);
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 0;
+  margin-top: 40px; /* ✅ Drop to match hero banner */
+}
+
+/* === Column Titles === */
+.eus-home-column-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* === METAR Text === */
+.eus-home-metar-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* === Active Flights Column Content === */
+.eus-home-active-flights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* === Individual Flight Card === */
+.eus-home-flight-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0,40,89,0.8);
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+/* === Beacon Animation === */
+.eus-home-beacon {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: eusHomeFlash 1s infinite;
+}
+
+@keyframes eusHomeFlash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+/* === METAR === */
+.eus-home-metar-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-bottom: 12px; /* ✅ Adds spacing between METARs */
+}
+/* === EUS NAVBAR: Updated Styling === */
+/* === Navigation Wrapper === */
+.eus-nav-wrapper {
+  background-color: transparent; /* Tartan overlay contrast */
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* === Navigation Links Container === */
+.eus-nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Base Link Styling === */
+.eus-nav-links li a {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* === Hover Styling === */
+.eus-nav-links li a:hover {
+  background-color: #ffffff;
+  color: #26255F;
+  border: 2px solid #ffffff;
+}
+
+/* === Active Link Styling === */
+.eus-nav-links li a.active {
+  background-color: #ffffff;
+  color: #26255F;
+  border: 2px solid #ffffff;
+}
+
+/* === Highlighted Join Us Button === */
+.eus-nav-links li a.eus-join-highlight {
+  background-color: #26255F;
+  color: #ffffff;
+  border: 2px solid #26255F;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* === Join Us Button Hover === */
+.eus-nav-links li a.eus-join-highlight:hover {
+  background-color: #ffffff;
+  color: #26255F;
+  border: 2px solid #ffffff;
+}
+
+/* ─── Map Header ───────────────────────────── */
+/* ─── Map Header ───────────────────────────── */
+/* ─── Map Header ───────────────────────────── */
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #26255F 0%, #3B3978 100%);
+  color: #ffffff;
+  border-bottom: 2px solid #3B3978;
+}
+
+.map-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.map-controls label {
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* ─── Map Container ────────────────────────── */
+#map {
+  width: 100%;
+  height: calc(100vh - 70px); /* Adjust for header height */
+  z-index: 0;
+}
+
+/* ─── Plane Icon ───────────────────────────── */
+.plane-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+/* ─── ATC Icon ─────────────────────────────── */
+.atc-icon {
+  width: 18px;
+  height: 18px;
+  background: url('/images/atc-icon.svg') no-repeat center center;
+  background-size: contain;
+}
+
+/* ─── Popup Styling ────────────────────────── */
+.euroscot-popup {
+  background: #1a1a1a;
+  color: #f0f0f0;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  max-width: 200px;
+}
+
+.popup-close {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  color: #999;
+}
+
+/* ─── Flight Table ─────────────────────────── */
+#table {
+  padding: 1rem 2rem;
+  background: #f4f4f4; /* Light neutral background for contrast */
+}
+
+#flightsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ─── Table Header ─────────────────────────── */
+#flightsTable thead {
+  background: linear-gradient(90deg, #26255F 0%, #3B3978 100%);
+  color: #ffffff;
+}
+
+#flightsTable th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #3B3978;
+}
+
+/* ─── Table Body ───────────────────────────── */
+#flightsTable td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #ccc;
+  color: #26255F; /* EUS blue for visibility */
+  background: #ffffff;
+}
+
+/* ─── Hover & Highlight ────────────────────── */
+#flightsTable tr:hover {
+  background: #eaeaea;
+}
+
+.highlight-row {
+  background: #3B3978 !important;
+  color: #ffffff;
+}
+
+/* ─── Callsign Cell Emphasis ───────────────── */
+#flightsTable td:first-child {
+  font-weight: bold;
+  color: #004080; /* Slightly brighter EUS blue */
+}
+
+
+/* Mobile responsive*/
+@media (max-width: 768px) {
+  /* General layout */
+  html, body {
+    overflow-x: hidden;
+    font-size: 0.9rem;
+  }
+
+  .page-wrapper,
+  .section-wrapper,
+  .fleet-section,
+  .auth-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Header & Nav */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .eus-nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eus-nav-links li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero Banner */
+  .hero-banner,
+  .eus-home-hero-banner {
+    padding: 30px 15px;
+    min-height: 180px;
+    min-width: unset;
+    font-size: 1rem;
+  }
+
+  .hero-banner h1,
+  .eus-home-hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-banner p,
+  .eus-home-hero-banner p {
+    font-size: 1rem;
+  }
+
+  /* Home Grid Layout */
+  .eus-home-top-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .eus-home-left-column,
+  .eus-home-right-column,
+  .eus-home-center-column {
+    margin-top: 20px;
+    padding: 12px;
+  }
+
+  /* Fleet Grid */
+  .fleet-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Flight Table */
+  #table {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  #flightsTable {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  /* Stats Ticker */
+  .eus-stats-ticker {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .ticker-content {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Footer */
+  footer, .site-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-images {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-center-box {
+    width: 100%;
+  }
+
+  /* Status Strip */
+  .status-strip ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .euvs-flight-status {
+    justify-content: center;
+  }
+
+  .euvs-flight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .euvs-icon-wrapper {
+    justify-content: center;
+  }
+
+
+  /* Map Header */
+  .map-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .map-header h1 {
+    font-size: 1.2rem;
+  }
+
+  /* Popups */
+  .euroscot-popup {
+    font-size: 0.75rem;
+  }
+}
+/* Wrapper and Layout */
+/*.eus-map-wrapper {
+  max-width: 1200px;
+  padding: 40px 20px;
+}*/
+
+.eus-map-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width:80%;
+  margin: 0 auto;
+}
+
+/* Columns */
+.eus-map-left-column,
+.eus-map-center-column,
+.eus-map-right-column {
+  background-color: rgba(38,37,95,0.6);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.eus-map-center-column {
+  flex: 2;
+}
+
+/* Titles */
+.eus-map-column-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+/* Flight Table */
+.eus-map-flights-box {
+  overflow-x: auto;
+}
+
+.eus-map-flight-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.eus-map-flight-table th,
+.eus-map-flight-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.eus-map-flight-table th {
+  background-color: #e6ddfa;
+  color: #4b2e83;
+}
+
+.eus-map-flight-table td {
+  color: #333;
+}
+
+.eus-map-flight-table tr:hover {
+  background-color: #f0eaff;
+  cursor: pointer;
+}
+
+.highlight-row {
+  background-color: #dcd0f7 !important;
+}
+
+/* Map Section */
+.eus-map-banner h1 {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.eus-map-banner .subheading {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.map-controls {
+  margin-bottom: 10px;
+}
+
+.map-controls label {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.eus-map-canvas {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #002859;
+  border-radius: 6px;
+}
+
+/* ATC List */
+.eus-map-atc-box {
+  font-size: 0.95rem;
+}
+
+.eus-map-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+/* Icons */
+.plane-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.atc-icon {
+  width: 18px;
+  height: 18px;
+  background-color: #4b2e83;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Popup */
+.euroscot-popup {
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: rgba(38, 37, 95, 0.6);
+  line-height: 1.4;
+}
+
+.popup-close {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+  color: #4b2e83;
+}
+.partner-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.partner-logo {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.partner-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.4em;
+}
+
+.partner-info p {
+  margin: 0 0 10px;
+  font-size: 1em;
+  color: #333;
+}
+
+.partner-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #0055a5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.partner-link:hover {
+  background-color: #003f7f;
+}
+/* === Staff Grid === */
+/* === Staff Grid === */
+.staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+/* === Staff Card === */
+.staff-card {
+  background: linear-gradient(135deg, #002859 0%, #26255F 100%);
+  border-radius: 8px;
+  padding: 20px;
+  width: 260px; /* Slightly wider */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  color: #FFFFFF;
+}
+
+.staff-card:hover {
+  transform: translateY(-4px);
+}
+
+/* === Staff Image === */
+.staff-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #FFFFFF;
+}
+
+/* === Department Title === */
+.staff-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === Staff Name === */
+.staff-card h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* === Staff Role === */
+.staff-card .job-title {
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  margin: 6px 0;
+  font-weight: bold;
+}
+
+/* === Staff Email Link === */
+.staff-card a {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  word-break: break-word;
+  font-weight: bold;
+}
+
+.staff-card a:hover {
+  text-decoration: underline;
+}
+/* Grid Layout */
+.form-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Form Rows */
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #002C5F;
+}
+
+/* Inputs, Selects, Textareas */
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: #002C5F;
+  outline: none;
+}
+
+/* Submit Button */
+.btn-primary {
+  background-color: #002C5F;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003B7A;
+}
+
+/* Success & Error Messages */
+.form-success,
+.form-error {
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.form-success {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.form-error {
+  background-color: #fdecea;
+  color: #c62828;
+  border: 1px solid #f5c6cb;
+}
+.cookie-block-message {
+  background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F);
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #444;
+  font-size: 1rem;
+}
+
+
+/* Section Intro */
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 32px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+/* Header Gradient */
+.bases-table thead th,
+.destinations-table thead th {
+  background: linear-gradient(to right, #26255F, #1a1a40);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Alternating Rows for Destinations Only */
+.row-light td {
+  background-color: #ffffff;
+  color: #002859;
+}
+
+.row-dark td {
+  background: linear-gradient(to right, #002859, #003b80);
+  color: white;
+}
+
+/* Table Base */
+.bases-table,
+.destinations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.bases-table td,
+.destinations-table td {
+  vertical-align: top;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 25%;
+}
+
+/* Section Headers */
+.bases-section h2 {
+  color: #002859;
+}
+
+.destinations-section h2 {
+  color: #26255F;
+}
+
+/* Entry Styling */
+.airport-entry {
+  padding-left: 0.5rem;
+//  border-left: 3px solid #0078d4;
+  font-size: 0.95rem;
+}
+
+/*Sav map fixes*/
+/* Make the entire page a grid */
+.eus-map-wrapper {
+/*  grid-template-columns: 20% 60% 20% !important;*/
+  gap: 0 !important;
+width: 100vw !important;
+/*max-width: 1600px !important;*/
+
+/*  align-items: start !important;*/
+padding: 40px 20px;
+}
+
+
+
+/* Column styling */
+.eus-map-left-column,
+.eus-map-right-column {
+/*overflow: hidden !important;*/
+  background-color: rgba(38,37,95,0.6) !important;
+  color: #ffffff !important;
+  padding: 16px !important;
+  border-radius: 6px !important;
+  margin-top: 40px !important;
+  width: 20%;
+  flex-grow: 1 !important;
+  height: fit-content;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.eus-map-center-column {
+  padding: 1rem !important;
+  margin-top: 40px !important;
+  flex-grow: 3 !important;
+}
+
+/* Map canvas styling */
+.eus-map-canvas {
+  width: 100% !important;
+  height: 500px !important;
+  border-radius: 8px !important;
+}
+/* === Special Liveries Section === */
+.eusvaboutusnew-specialliveries {
+  margin-top: 3rem;
+  padding: 2rem;
+  position: relative;
+  background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F);
+}
+
+.eusvaboutusnew-specialliveries h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.eusvaboutusnew-specialliveries p {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+  color: #FFF;
+}
+
+/* === Livery Grid === */
+.eusvaboutusnew-liverygrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.eusvaboutusnew-liverycard {
+  background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F);
+  color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eusvaboutusnew-liverycard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.eusvaboutusnew-liverycard img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.eusvaboutusnew-liverycard h3,
+.eusvaboutusnew-liverycard p,
+.eusvaboutusnew-liverycard a {
+  color: #FFF;
+}
+
+.eusvaboutusnew-liverycard h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.eusvaboutusnew-liverycard p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* === Modal Viewer === */
+.livery-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.livery-modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.livery-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.livery-close:hover {
+  color: #ff4444;
+}
+.centered-image {
+  text-align: center;
+}
+
+.centered-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
