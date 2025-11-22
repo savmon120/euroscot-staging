@@ -14,10 +14,6 @@ $currentPage = $page ?? 'home';
   </div>
 
   <nav class="eus-nav-wrapper">
-  <!-- Hamburger toggle -->
-    <div class="menu-toggle" id="mobile-menu">
-      ☰
-    </div>
     <ul class="eus-nav-links">
       <?php foreach ($navLinks as $slug => $label): ?>
         <li>
