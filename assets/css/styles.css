@@ -47,17 +47,20 @@ header {
   max-width: 100%;
   display: block;
 }
-.navbar {
+.eus-nav-wrapper {
   background-color: transparent;
   padding: 0.5rem 1rem;
+  position: relative;
 }
-.nav-links {
+
+.eus-nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-.nav-links li a {
+
+.eus-nav-links li a {
   background-color: #fff;
   color: #002859;
   text-decoration: none;
@@ -66,10 +69,43 @@ header {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
-.nav-links li a:hover {
+
+.eus-nav-links li a:hover {
   background-color: #002859;
   color: white;
 }
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #002859;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .eus-nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .eus-nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
 /* ================================
    Branding & NOTAM Banner
