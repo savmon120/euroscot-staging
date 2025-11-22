@@ -31,12 +31,13 @@ header {
   background-size: auto;
   background-position: top left;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, nav/hamburger right */
   align-items: center;
   padding: 10px 20px;
   min-height: 60px;
   width: 100%;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -47,7 +48,12 @@ header {
   max-width: 100%;
   display: block;
 }
+<<<<<<< HEAD
+/*
+.eus-nav-wrapper {
+=======
 .navbar {
+>>>>>>> upstream/main
   background-color: transparent;
   padding: 0.5rem 1rem;
 }
@@ -70,6 +76,41 @@ header {
   background-color: #002859;
   color: white;
 }
+<<<<<<< HEAD
+*/
+/* Hamburger button 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #002859;
+}*/
+
+/* Mobile styles */
+/*@media (max-width: 768px) {
+  .eus-nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .eus-nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}*/
+
+=======
+>>>>>>> upstream/main
 
 /* ================================
    Branding & NOTAM Banner
@@ -922,6 +963,7 @@ background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F)
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: relative; /* Needed for dropdown positioning */
 }
 
 /* === Navigation Links Container === */
@@ -975,6 +1017,42 @@ background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F)
   color: #26255F;
   border: 2px solid #ffffff;
 }
+
+/* === Hamburger Toggle Button === */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff; /* Matches your nav links */
+  margin-left: auto;
+}
+
+/* === Mobile Styles === */
+@media (max-width: 768px) {
+  .eus-nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background-color: #26255F; /* Match your branding */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .eus-nav-links.active {
+    display: flex;
+  }
+  .menu-toggle{
+    display: block;
+    z-index: 1100;
+  }
+
+
+
 
 /* ─── Map Header ───────────────────────────── */
 /* ─── Map Header ───────────────────────────── */
@@ -1116,12 +1194,6 @@ background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F)
   }
 
   /* Header & Nav */
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
   .eus-nav-links {
     flex-direction: column;
     align-items: center;
