@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/euroscot/staging.euroscot-virtual.co.uk/
+    - /bin/rsync -av --delete \
+        --exclude '.env' \
+        --exclude 'vamsys_token.json' \
+        --exclude 'assets/js/home.js' \
+        --exclude 'includes/db.php' \
+        --exclude 'includes/functions.php' \
+        ./ $DEPLOYPATH
