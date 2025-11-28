@@ -1,5 +1,5 @@
 <?php
-$logo = '/assets/images/euroscotlogoandscowhite.png';
+$logo = '/assets/images/eus_xmas.png';
 
 // ✅ Use $siteName from index.php
 $notam = "$siteName: Welcome to our new website! Please bear with us while we continue to make adjustments to improve your experience...";
